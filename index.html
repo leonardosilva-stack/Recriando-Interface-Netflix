@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+    
+    <title>NETFLIX CLONE</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+            <nav>
+                <a href="#">Inicio</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">VIKINGS</h3>
+                <p class="descricao">Ragnar Lothbrok, um jovem que se considera descendente de Odin, é um guerreiro, fazendeiro e chefe de família. Visionário e sonhando viver diversas aventuras, ele acredita que as riquezas sonhadas por seu povo encontram-se além do mar Báltico. Mas para conseguir conquistá-las ele precisa convencer Earl Haraldson, o líder de seu povo, a permitir que ele e seus guerreiros viagem em direção à Inglaterra.</p>
+                <div class="botoes">
+                    <button onclick="toggleVideo();" role="button" class="botao">
+                        <i class="fas fa-play"></i>     
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fas fa-info-circle"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class=trailer>
+            <video src="img/Vikings Season 1 Trailer[1].mp4" controls="true" autoplay="true"></video>
+            <img class="close" src="img/close.png" alt="Fechar" onclick="toggleVideo();">
+        </div>
+
+    </main>
+
+
+
+    <div class="carrosel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="box-filme"><img src="img/Vikings_Cartas.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/The 100.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/The Walking Dead.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Fear The Walking Dead.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Sobrenatural.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Lucifer.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/La casa de Papel.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Justiceiro.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Demolidor.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Mr Robot.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Chernobil.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Flash.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Shingeki no Kyojin.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Death Note.jpg" alt=""></div>
+            <div class="box-filme"><img src="img/Cavaleiros.jpg" alt=""></div>
+        </div>
+    </div>
+
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+    
+    <script src="https://kit.fontawesome.com/059825fd43.js" crossorigin="anonymous"></script>
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/main.js"></script>
+</body>
+</html>
